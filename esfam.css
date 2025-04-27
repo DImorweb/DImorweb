@@ -19,3 +19,73 @@ body {
   font-size: inherit;
   min-block-size: 100vh;
 }
+
+header {
+  background-color: white;
+  color: #357d52;
+  position: fixed;
+  left: 70px;
+  right: 70px;
+  top: 20px;
+  block-size: 50px;
+  border-radius: 25px;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+  display: flex;
+  padding-inline: 30px;
+}
+
+.header {
+  /* background-color: lightpink; */
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.header.logo span {
+  font-size: 21px;
+  font-weight: 700;
+  font-family: epilogue, sans-serif;
+}
+
+#theme {
+  background-color: white;
+  color: rgb(53, 125, 82);
+  block-size: 50px;
+  inline-size: 40px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+  position: fixed;
+  right: 20px;
+  top: 20px;
+}
+
+#theme-menu {
+  background-color: white;
+  color: #357d52;
+  inline-size: 40px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  transition: all 0.25s ease-in-out;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#theme-menu span {
+  block-size: 40px;
+  inline-size: 40px;
+  border-radius: 20px;
+}
+
+#theme-menu span:first-child {
+  block-size: 60px;
+}

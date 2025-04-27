@@ -12,14 +12,24 @@
     <script type="module" src="esfam.js" defer></script>
   </head>
   <body>
+    <button id="theme-menu">
+      <span></span>
+      <span id="theme-light"
+        ><img src="icons/light-mode.png" alt="light"
+      /></span>
+      <span id="theme-dark"><img src="icons/dark-mode.png" alt="dark" /></span>
+    </button>
+
+    <button id="theme"><img src="icons/theme.png" alt="theme" /></button>
+
     <header>
-      <div>
+      <div class="header logo">
         <span>Esfam Marketplace</span>
       </div>
 
-      <div></div>
+      <div class="header searchBar"></div>
 
-      <div><button id="cart">Cart</button></div>
+      <div class="header navigation"><button id="cart">Cart</button></div>
     </header>
 
     <main></main>
