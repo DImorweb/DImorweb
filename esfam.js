@@ -14,7 +14,7 @@ navMenu.style.transition = "block-size 0.25s ease-in-out"; // Add transition for
 
 function openMenu() {
   // Open the navigation menu
-  navMenu.style.blockSize = "150px";
+  navMenu.style.blockSize = "200px";
   menuBtn.style.transform = "rotate(90deg)"; // Rotate the menu button
 }
 
@@ -26,7 +26,7 @@ function closeMenu() {
 
 // Add event listeners to the menu button and the navigation menu
 menuBtn.addEventListener("click", function () {
-  if (navMenu.style.blockSize === "150px") {
+  if (navMenu.style.blockSize === "200px") {
     closeMenu();
   } else {
     openMenu();
