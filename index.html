@@ -12,28 +12,91 @@
     <script type="module" src="esfam.js" defer></script>
   </head>
   <body>
-    <button id="theme-menu">
-      <span></span>
-      <span id="theme-light"
-        ><img src="icons/light-mode.png" alt="light"
-      /></span>
-      <span id="theme-dark"><img src="icons/dark-mode.png" alt="dark" /></span>
-    </button>
-
-    <button id="theme"><img src="icons/theme.png" alt="theme" /></button>
-
+    <!-- FLOATING HEADER -->
     <header>
+      <!-- MENU BUTTON -->
+      <div class="header menu">
+        <button id="menu-button">
+          <img
+            src="icons/menu.png"
+            alt="menu-button"
+            width="30px"
+            height="30px"
+          />
+        </button>
+      </div>
+
+      <!-- LOGO -->
       <div class="header logo">
         <span>Esfam Marketplace</span>
       </div>
 
-      <div class="header searchBar"></div>
+      <!-- SEARCH BAR -->
+      <div class="header search-bar">
+        <input
+          type="text"
+          name="search"
+          id="main-search-bar"
+          placeholder="Search"
+          maxlength="50"
+        />
+        <button id="search-bar-button">
+          <img
+            src="icons/search.png"
+            alt="search bar search button"
+            width="25px"
+            height="25px"
+          />
+        </button>
+      </div>
 
-      <div class="header navigation"><button id="cart">Cart</button></div>
+      <!-- NAVIGATION -->
+      <div class="header navigation">
+        <!-- SEARCH BUTTON -->
+        <button id="search">
+          <img src="icons/search.png" alt="search" width="30px" height="30px" />
+        </button>
+
+        <!-- FAVORITE BUTTON -->
+        <button id="favorite">
+          <img
+            src="icons/favorite.png"
+            alt="favorite"
+            width="30px"
+            height="30px"
+          />
+        </button>
+
+        <!-- CART BUTTON -->
+        <button id="cart">
+          <img src="icons/cart.png" alt="cart" width="30px" height="30px" />
+        </button>
+
+        <!-- PROFILE BUTTON -->
+        <button id="profile">
+          <img
+            src="icons/profile.png"
+            alt="profile"
+            width="30px"
+            height="30px"
+          />
+        </button>
+      </div>
+      <!-- NAVIGATION END -->
     </header>
+    <!-- FLOATING HEADER END -->
 
-    <main></main>
+    <!-- MAIN BODY CONTENT -->
+    <main>
+      <!-- CTA SECTION -->
+      <section id="cta-section"></section>
 
+      <section></section>
+    </main>
+    <!-- MAIN BODY CONTENT END -->
+
+    <!-- FOOTER -->
     <footer></footer>
+    <!-- FOOTER END -->
   </body>
 </html>

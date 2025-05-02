@@ -2,75 +2,53 @@
 
 const body = document.body;
 
-// setTimeout(() => {
-//   alert("Welcome to the ESFAM website! We hope you enjoy your stay. If you have any questions, feel free to reach out to us.");
-// }, 10000);
+const bgImages = [
+  "url('images/image1.jpg')",
+  "url('images/image2.jpg')",
+  "url('images/image3.jpg')",
+  "url('images/image4.jpg')",
+];
+const ctaSection = document.querySelector("#cta-section");
+ctaSection.style.backgroundImage = bgImages[2];
+ctaSection.style.backgroundSize = "cover";
+ctaSection.style.backgroundPosition = "center";
+ctaSection.style.backgroundRepeat = "no-repeat";
+ctaSection.style.transition = "background-image 2s ease-in-out";
 
-const theme = document.querySelector("#theme");
-// localStorage.setItem("theme", "light");
-// document.body.style.backgroundColor = "#ffffff";
-// document.body.style.color = "#000000";
-document.body.style.transition = "background-color 0.25s, color 0.25s";
-document.querySelector("header").style.transition =
-  "background-color 0.25s, color 0.25s";
+let currentIndex = 0;
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % bgImages.length;
+  ctaSection.style.backgroundImage = bgImages[currentIndex];
+}, 10000);
 
-const themeMenu = document.querySelector("#theme-menu");
-themeMenu.style.blockSize = "50px";
+const scrollButton = document.createElement("button");
+scrollButton.textContent = "↑";
+scrollButton.style.position = "fixed";
+scrollButton.style.bottom = "20px";
+scrollButton.style.right = "20px";
+scrollButton.style.padding = "10px 15px";
+scrollButton.style.fontSize = "16px";
+scrollButton.style.backgroundColor = "#357d52";
+scrollButton.style.color = "#fff";
+scrollButton.style.border = "none";
+scrollButton.style.borderRadius = "5px";
+scrollButton.style.cursor = "pointer";
+scrollButton.style.display = "none";
+scrollButton.style.zIndex = "1000";
 
-const themeLight = document.querySelector("#theme-light");
-const themeDark = document.querySelector("#theme-dark");
+body.appendChild(scrollButton);
 
-// Check if the user has a preferred theme in localStorage
-
-if (localStorage.getItem("theme") === "dark") {
-  darkTheme();
-} else if (localStorage.getItem("theme") === "light") {
-  lightTheme();
-}
-
-// if (localStorage.getItem("theme") === "dark") {
-//   localStorage.setItem("theme", "dark");
-//   document.body.style.backgroundColor = "#000000";
-//   document.body.style.color = "#ffffff";
-//   document.querySelector("header").style.backgroundColor = "whitesmoke";
-// } else if (localStorage.getItem("theme") === "light") {
-//   localStorage.setItem("theme", "light");
-//   document.body.style.backgroundColor = "#ffffff";
-//   document.body.style.color = "#000000";
-//   document.querySelector("header").style.backgroundColor = "#ffffff";
-// }
-
-// Change the theme of the website based on the user's preference
-theme.addEventListener("click", () => {
-  if (themeMenu.style.blockSize === "50px") {
-    themeMenu.style.blockSize = "140px";
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    scrollButton.style.display = "block";
   } else {
-    themeMenu.style.blockSize = "50px";
+    scrollButton.style.display = "none";
   }
 });
 
-function lightTheme() {
-  localStorage.setItem("theme", "light");
-  document.body.style.backgroundColor = "#ffffff";
-  document.body.style.color = "#000000";
-  document.querySelector("header").style.backgroundColor = "#ffffff";
-}
-
-function darkTheme() {
-  localStorage.setItem("theme", "dark");
-  document.body.style.backgroundColor = "#000000";
-  document.body.style.color = "#ffffff";
-  document.querySelector("header").style.backgroundColor = "whitesmoke";
-}
-
-themeLight.addEventListener("click", () => {
-  lightTheme();
-  themeMenu.style.blockSize = "50px";
+scrollButton.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 });
-
-themeDark.addEventListener("click", () => {
-  darkTheme();
-  themeMenu.style.blockSize = "50px";
-});
-
-// window.matchMedia("(prefers-color-scheme: dark)");
