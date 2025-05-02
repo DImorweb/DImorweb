@@ -22,7 +22,7 @@ html {
 
 /* HEADER STYLING */
 header {
-  /* background-color: lightpink; */
+  background-color: white;
   block-size: 50px;
   position: fixed;
   left: 0;
@@ -93,4 +93,9 @@ nav {
   display: flex;
   align-items: center;
   flex: 0.3;
+}
+
+/* MAIN BODY CONTENT STYLING */
+#cta-section {
+  block-size: 100vh;
 }

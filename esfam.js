@@ -32,3 +32,28 @@ menuBtn.addEventListener("click", function () {
     openMenu();
   }
 });
+
+// CTA SECTION IMAGE CHANGING EFFECT AND STYLING
+const ctaSection = document.querySelector("#cta-section");
+
+ctaSection.style.backgroundposition = "center"; // Center the background image
+ctaSection.style.backgroundSize = "cover"; // Cover the entire section
+ctaSection.style.transition = "background-image 0.25s ease-in-out"; // Smooth transition for background image change
+ctaSection.style.backgroundRepeat = "no-repeat"; // Prevent background image from repeating
+
+const welcomeImages = [
+  "mobile-images/image1.webp",
+  "mobile-images/image2.webp",
+  "mobile-images/image3.webp",
+  "mobile-images/image4.webp",
+];
+
+ctaSection.style.backgroundImage = `url(${welcomeImages[0]})`; // Set the initial background image
+
+let currentImageIndex = 0; // Initialize the current image index
+
+setInterval(() => {
+  let nextImageIndex = (currentImageIndex + 1) % welcomeImages.length; // Calculate the next image index
+  ctaSection.style.backgroundImage = `url(${welcomeImages[nextImageIndex]})`; // Change the background image
+  currentImageIndex = nextImageIndex; // Update the current image index
+}, 10000);
