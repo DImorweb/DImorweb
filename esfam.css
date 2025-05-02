@@ -14,6 +14,10 @@ html {
   margin: 0;
 }
 
+*:focus {
+  outline: none;
+}
+
 /* MOBILE FIRST DESIGN */
 
 /* HEADER STYLING */
@@ -37,7 +41,7 @@ header div:nth-child(2) {
 #logo {
   font-size: 20px;
   font-weight: 600;
-  color: #004e20;
+  color: #357d52;
   padding-inline-start: 10px;
 }
 
@@ -45,4 +49,48 @@ header div:nth-child(2) {
 header button {
   background-color: transparent;
   border: none;
+}
+
+header button:not(#menu-button) {
+  padding-inline: 2px;
+}
+
+/* NAV MENU STYLING */
+nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#nav-menu {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  block-size: 100%;
+  inline-size: 100%;
+  list-style: none;
+}
+
+#nav-menu li {
+  block-size: 25px;
+  display: flex;
+}
+
+#nav-menu span {
+  padding-inline-end: 5px;
+}
+
+#nav-menu li a {
+  text-decoration: none;
+  color: #357d52;
+  font-size: 10px;
+  padding-inline: 20px 40px;
+  display: flex;
+  align-items: center;
+  flex: 0.3;
 }
