@@ -3,7 +3,8 @@ html {
   background-color: white;
   color: black;
   font-family: epilogue, sans-serif;
-  font-size: 16px;
+  font-size: 12px;
+  line-height: 20px;
 }
 
 *,
@@ -16,6 +17,10 @@ html {
 
 *:focus {
   outline: none;
+}
+
+h6 {
+  color: #ff0000;
 }
 
 /* MOBILE FIRST DESIGN */
@@ -31,6 +36,7 @@ header {
   padding-inline: 15px;
   display: flex;
   align-items: center;
+  z-index: 1000;
 }
 
 header div:nth-child(2) {
@@ -96,6 +102,139 @@ nav {
 }
 
 /* MAIN BODY CONTENT STYLING */
+
+/* Call To Action section / the first section */
 #cta-section {
   block-size: 100vh;
+  /* display: none; */
+  overflow: hidden;
+}
+
+#text-area {
+  background-color: #ffffffb3;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  block-size: 300px;
+  display: flex;
+}
+
+#text-area > div:first-child {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#text-area > div:last-child {
+  inline-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-block-end: 30px;
+}
+
+.cta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-inline: 15px;
+}
+.cta:not(.cta.button) {
+  justify-content: center;
+}
+
+.cta h2 {
+  font-size: 20px;
+  color: #357d52;
+  line-height: 30px;
+}
+
+.cta-button {
+  background-color: transparent;
+  color: #357d52;
+  border: 2px solid #357d52;
+  block-size: 35px;
+  inline-size: 100px;
+  margin-block-start: 10px;
+}
+
+.cta-button:hover {
+  background-color: #357d52;
+  color: #ffffff;
+}
+
+.image-locator {
+  block-size: 8px;
+  inline-size: 8px;
+  border-radius: 4px;
+  margin: 5px;
+}
+
+/* CATEGORY SECTION */
+
+#category-section {
+  background-color: #ffffff;
+  position: relative;
+}
+
+.decor {
+  background-color: #357d5233;
+  block-size: 50px;
+  inline-size: 50px;
+  border-radius: 25px;
+  position: absolute;
+  top: 60px;
+}
+
+.circle {
+  left: 200px;
+}
+
+.rounded-rect {
+  inline-size: 300px;
+  block-size: 100px;
+  border-radius: 50px;
+  left: -100px;
+  top: 90px;
+}
+
+.main-category-section {
+  /* background-color: lightpink; */
+  inline-size: 100%;
+  position: absolute;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block-start: 50px;
+}
+
+.category.writeup {
+  /* background-color: lightblue; */
+  block-size: 200px;
+  inline-size: 300px;
+}
+
+.category.box {
+  block-size: 300px;
+  inline-size: 300px;
+  background-color: #357d52;
+  margin-block: 25px;
+  border-radius: 10px;
+}
+
+/* SCROLL BACK TO TOP FUNCTION */
+#scroll-btn {
+  background-color: #357d52;
+  color: #ffffff;
+  padding: 15px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  z-index: 1000;
 }
