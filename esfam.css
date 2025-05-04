@@ -107,7 +107,7 @@ nav {
 /* Call To Action section / the first section */
 #cta-section {
   block-size: 100vh;
-  display: none;
+  /* display: none; */
   overflow: hidden;
 }
 
