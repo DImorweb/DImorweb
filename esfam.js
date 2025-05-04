@@ -98,6 +98,23 @@ setInterval(() => {
   }
 }, 10000);
 
+// ENLARGING THE CATEGORY BOXES ON CLICK
+const categoryBoxes = document.querySelectorAll(".category.box"); // Select all category boxes
+
+// Add event listeners to each category box for hover effect
+categoryBoxes.forEach((box) => {
+  box.addEventListener("mouseover", () => {
+    box.style.inlineSize = "100%"; // Enlarge the box on hover
+    box.style.borderRadius = "0px"; // Remove border radius on hover
+  });
+
+  // Reset the box size on mouse out
+  box.addEventListener("mouseout", () => {
+    box.style.inlineSize = "300px"; // Reset the box size on mouse out
+    box.style.borderRadius = "10px"; // Add border radius back on mouse out
+  });
+});
+
 // A SCROLL BACK TO TOP BUTTON
 const scrollbtn = document.createElement("button");
 scrollbtn.id = "scroll-btn"; // Set the ID for the button

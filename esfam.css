@@ -70,6 +70,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
 #nav-menu {
@@ -106,7 +107,7 @@ nav {
 /* Call To Action section / the first section */
 #cta-section {
   block-size: 100vh;
-  /* display: none; */
+  display: none;
   overflow: hidden;
 }
 
@@ -224,6 +225,48 @@ nav {
   background-color: #357d52;
   margin-block: 25px;
   border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-container {
+  /* background-color: lightpink; */
+  block-size: 95%;
+  inline-size: 95%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.category-container > div {
+  /* background-color: lightblue; */
+  color: #ffffff;
+  block-size: 48%;
+  border-radius: inherit;
+  padding: 10px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.category-container > div:first-child {
+  /* background-color: lightgreen; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.category-container > div:first-child > div {
+  /* background-color: lightblue; */
+  margin-block-start: 10px;
+}
+
+.category-writeup {
+  overflow: hidden;
 }
 
 /* SCROLL BACK TO TOP FUNCTION */
