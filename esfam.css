@@ -107,7 +107,7 @@ nav {
 /* Call To Action section / the first section */
 #cta-section {
   block-size: 100vh;
-  /* display: none; */
+  display: none;
   overflow: hidden;
 }
 
@@ -203,7 +203,6 @@ nav {
 }
 
 .main-category-section {
-  /* background-color: lightpink; */
   inline-size: 100%;
   position: absolute;
   z-index: 100;
@@ -214,7 +213,6 @@ nav {
 }
 
 .category.writeup {
-  /* background-color: lightblue; */
   block-size: 200px;
   inline-size: 300px;
 }
@@ -225,44 +223,70 @@ nav {
   background-color: #357d52;
   margin-block: 25px;
   border-radius: 10px;
-  transition: all 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.5s ease-in-out;
+}
+
+.category.box.fashion:hover {
+  background-image: url(desktop-images/fashion.webp);
+}
+
+.category.box.electronics:hover {
+  background-image: url(desktop-images/electronics.webp);
+}
+
+.category.box.edible:hover {
+  background-image: url(desktop-images/edible.webp);
+}
+
+.category.box.services:hover {
+  background-image: url(desktop-images/service.webp);
 }
 
 .category-container {
-  /* background-color: lightpink; */
-  block-size: 95%;
-  inline-size: 95%;
+  block-size: 100%;
+  inline-size: 100%;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color:  #357d5280;
 }
 
 .category-container > div {
-  /* background-color: lightblue; */
   color: #ffffff;
-  block-size: 48%;
   border-radius: inherit;
   padding: 10px;
   text-align: center;
   font-size: 10px;
-}
-
-.category-container > div:first-child {
-  /* background-color: lightgreen; */
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.category-container > div:first-child {
   justify-content: flex-end;
+  block-size: 50%;
+}
+
+.category-container > div:last-child {
+  justify-content: flex-start;
+  block-size: 55%;
 }
 
 .category-container > div:first-child > div {
-  /* background-color: lightblue; */
   margin-block-start: 10px;
+}
+
+.category-button {
+  color: #ffffff;
+  border: 2px solid #ffffff;
 }
 
 .category-writeup {
