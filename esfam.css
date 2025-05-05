@@ -321,6 +321,7 @@ nav {
 .category-button {
   color: #ffffff;
   border: 2px solid #ffffff;
+  padding-inline: 20px;
 }
 
 .category-writeup {
@@ -459,7 +460,32 @@ nav {
 }
 
 #review-section {
-  padding: 50px;
+  padding-block: 40px;
+}
+
+#review-section > div:first-child {
+  margin-block-end: 40px;
+  margin-inline-start: 40px;
+}
+
+#review-section > div:last-child {
+  block-size: 100px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+}
+
+#review-section > div:last-child::-webkit-scrollbar {
+  display: none;
+}
+
+.review-card {
+  background-color: #d9d9d9;
+  block-size: 100%;
+  margin-inline: 20px;
+  min-inline-size: 300px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 /* SCROLL BACK TO TOP FUNCTION */
