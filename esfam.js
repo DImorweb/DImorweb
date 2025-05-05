@@ -49,16 +49,11 @@ const welcomeImages = [
   "mobile-images/image4.webp",
 ];
 
-const imagelocator1 = document.querySelector(".image1"); // Image locator 1
-const imagelocator2 = document.querySelector(".image2"); // Image locator 2
-const imagelocator3 = document.querySelector(".image3"); // Image locator 3
-const imagelocator4 = document.querySelector(".image4"); // Image locator 4
-
 const imagelocator = [
-  imagelocator1,
-  imagelocator2,
-  imagelocator3,
-  imagelocator4,
+  document.querySelector(".image1"),
+  document.querySelector(".image2"),
+  document.querySelector(".image3"),
+  document.querySelector(".image4"),
 ]; // Array of image locators
 
 ctaSection.style.backgroundImage = `url(${welcomeImages[0]})`; // Set the initial background image
@@ -112,6 +107,40 @@ categoryBoxes.forEach((box) => {
   box.addEventListener("mouseout", () => {
     box.style.inlineSize = "300px"; // Reset the box size on mouse out
     box.style.borderRadius = "10px"; // Add border radius back on mouse out
+  });
+});
+
+// DISPLAYING THE EXPLORE BUTTON WHEN THE CATEGORY BOXES ARE HOVERED
+// Declaring the category boxes
+const categoryBox = [
+  document.querySelector(".category.box.fashion"),
+  document.querySelector(".category.box.electronics"),
+  document.querySelector(".category.box.edible"),
+  document.querySelector(".category.box.services"),
+];
+
+// Declaring the explore buttons
+const exploreBtn = [
+  document.querySelector(".cta-button.category-button.fashion"),
+  document.querySelector(".cta-button.category-button.electronics"),
+  document.querySelector(".cta-button.category-button.edible"),
+  document.querySelector(".cta-button.category-button.services"),
+];
+
+// Initially hide all explore buttons
+exploreBtn.forEach((btn) => {
+  btn.style.display = "none";
+});
+
+categoryBox.forEach((box, index) => {
+  // Add event listener for mouseover to show the explore button
+  box.addEventListener("mouseover", () => {
+    exploreBtn[index].style.display = "block"; // Show the explore button on hover
+  });
+
+  // Add event listener for mouseout to hide the explore button
+  box.addEventListener("mouseout", () => {
+    exploreBtn[index].style.display = "none"; // Hide the explore button on mouse out
   });
 });
 

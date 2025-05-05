@@ -107,7 +107,7 @@ nav {
 /* Call To Action section / the first section */
 #cta-section {
   block-size: 100vh;
-  display: none;
+  /* display: none; */
   overflow: hidden;
 }
 
@@ -256,13 +256,13 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color:  #357d5280;
+  background-color: #357d5280;
 }
 
 .category-container > div {
   color: #ffffff;
   border-radius: inherit;
-  padding: 10px;
+  padding-inline: 20px;
   text-align: center;
   font-size: 10px;
   display: flex;
@@ -273,6 +273,7 @@ nav {
 .category-container > div:first-child {
   justify-content: flex-end;
   block-size: 50%;
+  margin-block-end: 10px;
 }
 
 .category-container > div:last-child {
@@ -290,6 +291,8 @@ nav {
 }
 
 .category-writeup {
+  /* background-color: lightpink; */
+  align-self: center;
   overflow: hidden;
 }
 
