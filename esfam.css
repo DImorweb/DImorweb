@@ -177,7 +177,6 @@ nav {
 /* CATEGORY SECTION */
 
 #category-section {
-  background-color: #ffffff;
   position: relative;
 }
 
@@ -203,13 +202,10 @@ nav {
 }
 
 .main-category-section {
-  inline-size: 100%;
-  position: absolute;
-  z-index: 100;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-block-start: 50px;
+  padding-block: 50px;
 }
 
 .category.writeup {
@@ -291,10 +287,14 @@ nav {
 }
 
 .category-writeup {
-  /* background-color: lightpink; */
   align-self: center;
   overflow: hidden;
 }
+
+/* #top-seller-section {
+  block-size: 200px;
+  background-color: lightpink;
+} */
 
 /* SCROLL BACK TO TOP FUNCTION */
 #scroll-btn {
