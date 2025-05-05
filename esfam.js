@@ -1,5 +1,12 @@
 "use strict";
 // This is the main JavaScript file for the ESFAM project.
+
+// PRELOADER FUNCTIONALITY
+window.addEventListener('load', function () {
+  const preloader = document.getElementById('preloader');
+  preloader.style.display = 'none';
+});
+
 const body = document.body;
 
 // Declaring the navigation menu and the menu button

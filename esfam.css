@@ -23,6 +23,42 @@ h6 {
   color: #ff0000;
 }
 
+/* PRELOADER STYLING */
+/* Preloader container */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Simple animated spinner */
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #357d52;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+/* Spin animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* HIDE PRELOADER AFTER 3 SECONDS */
+
 /* MOBILE FIRST DESIGN */
 
 /* HEADER STYLING */
@@ -158,7 +194,7 @@ nav {
   color: #357d52;
   border: 2px solid #357d52;
   block-size: 35px;
-  inline-size: 100px;
+  padding-inline: 10px;
   margin-block-start: 10px;
 }
 
@@ -177,6 +213,7 @@ nav {
 /* CATEGORY SECTION */
 
 #category-section {
+  /* display: none; */
   position: relative;
 }
 
@@ -291,10 +328,22 @@ nav {
   overflow: hidden;
 }
 
-/* #top-seller-section {
-  block-size: 200px;
-  background-color: lightpink;
-} */
+#top-seller-section {
+  /* Remove when done */
+  margin-block-start: 50px;
+  /* background-color: lightpink; */
+}
+
+#top-seller-section > div:not(#x-axis-slider) {
+  inline-size: 300px;
+  justify-self: center;
+}
+
+#x-axis-slider {
+  /* background-color: lightblue; */
+  block-size: 350px;
+  margin-block: 10px;
+}
 
 /* SCROLL BACK TO TOP FUNCTION */
 #scroll-btn {
